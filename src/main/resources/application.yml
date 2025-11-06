@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ecommerce-spring
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://localhost:3306/spring_ecommerce_db}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+    driver-class-name: ${DATABASE_DRIVER:com.mysql.cj.jdbc.Driver}
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: ${HIBERNATE_DIALECT:org.hibernate.dialect.MySQL8Dialect}
+    hibernate:
+      ddl-auto: update
